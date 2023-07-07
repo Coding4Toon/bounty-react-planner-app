@@ -3,14 +3,18 @@ import Draggable from 'react-draggable';
 import { quote } from '../quote';
 
 export default function MyCustomWidget() {
+
+    //Quote
     const [myQuote, setMyQuote] = useState(1);
 
+    //Kanban
     const [board, setBoard] = useState([])
     useEffect(() => {
         let data = window.localStorage.getItem("data")
         if (data) {
             setBoard(JSON.parse(data))
         } else {
+            //Initial state
             setBoard([
                 {
                     id: 1,
@@ -42,10 +46,12 @@ export default function MyCustomWidget() {
     }, [board])
     return (
         <div>
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginTop: '25px', }}>
+            {/* Display random quotes */}
+            <div style={styles.quoteStyle}>
                 <div>{quote.find(quote => quote.id === myQuote)?.content}</div>
                 <div>{quote.find(quote => quote.id === myQuote)?.author}</div>
             </div>
+            {/* Display Kanban */}
             <div style={styles.boardContainer}>
                 {board.map((list) => {
                     return (
@@ -112,6 +118,8 @@ export default function MyCustomWidget() {
                 })}
             </div>
             <div className='timer-controls' style={{ display: "flex", justifyContent: "space-between", alignItems: "center", margin: '10px', }}>
+
+                {/* Button to add new task in to do list  */}
                 <button
                     style={{
                         background: "none",
@@ -132,6 +140,8 @@ export default function MyCustomWidget() {
 
                     }}
                 >+ New Task To Do</button>
+
+                {/* Button to reset Kanban and start from scratch */}
                 <button
                     style={{
                         background: "none",
@@ -173,6 +183,7 @@ export default function MyCustomWidget() {
     );
 }
 
+// Style for Kanban
 const styles = {
     boardContainer: {
         display: 'flex',
@@ -185,7 +196,7 @@ const styles = {
         padding: '10px',
         width: '10vw',
         minHeight: "20vh",
-        fontSize: "20px",
+        fontSize: "25px",
         fontWeight: "bold",
     },
     cardContainer: {
@@ -215,5 +226,16 @@ const styles = {
         cursor: 'pointer',
         outline: 'none'
 
+    },
+
+    quoteStyle: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: '25px',
+        fontSize: "15px",
+        fontWeight: "bold",
+        textAlign: 'center',
     },
 }
