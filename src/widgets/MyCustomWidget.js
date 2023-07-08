@@ -56,7 +56,7 @@ export default function MyCustomWidget() {
                 {board.map((list) => {
                     return (
                         <div id={`list_${list.id}`} key={list.id} className="list-container" style={styles.listContainer}>
-                            <h2>{list.title}</h2>
+                            <h2 style={styles.h2} >{list.title}</h2>
                             {list.cards.map((card) => {
                                 return (
                                     <Draggable
@@ -196,6 +196,10 @@ const styles = {
         padding: '10px',
         width: '7vw',
         minHeight: "20vh",
+        fontSize: "20px",
+        fontWeight: "bold",
+    },
+    h2: {
         fontSize: "20px",
         fontWeight: "bold",
     },
