@@ -66,7 +66,7 @@ Then card is removed from original position to new one.
 
 ### Improvement / Limitation detected
 
-Kanban draggable cards only support "Main", "Right" and "Left" position. 
+Kanban draggable cards only support "Main", "Right" and "Left" positions. 
 In "Floating" position, draggable cards are not working due to conflict draggable floating widget.
 
 
