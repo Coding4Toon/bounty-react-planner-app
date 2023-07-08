@@ -64,8 +64,11 @@ Then card is removed from original position to new one.
 12) We add our custom function into the state array and import it into the file WidgetGalleryModal.js 
 
 
-### Improvement
+### Improvement / Limitation detected
 
-Kanban widget only support "Main" position. 
+Kanban draggable cards only support "Main", "Right" and "Left" position. 
+In "Floating" position, draggable cards are not working due to conflict draggable floating widget.
+
+
 
 

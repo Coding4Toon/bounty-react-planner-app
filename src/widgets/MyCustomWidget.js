@@ -194,9 +194,9 @@ const styles = {
     listContainer: {
         borderRadius: '5px',
         padding: '10px',
-        width: '10vw',
+        width: '7vw',
         minHeight: "20vh",
-        fontSize: "25px",
+        fontSize: "20px",
         fontWeight: "bold",
     },
     cardContainer: {
@@ -214,7 +214,7 @@ const styles = {
         padding: 0,
         margin: 0,
         border: "none",
-        fontSize: "15px",
+        fontSize: "12px",
     },
     newCard: {
         backgroundColor: '#efaeae',
