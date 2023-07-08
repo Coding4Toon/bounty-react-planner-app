@@ -61,6 +61,8 @@ Then card is removed from original position to new one.
 11) One button is implemented to reset kanban board from task added and come back to initial state. 
 #### `const [board, setBoard] = useState([])`
 
+12) We add our custom function into the state array and import it into the file WidgetGalleryModal.js 
+
 
 ### Improvement
 
